@@ -1,0 +1,19 @@
+import string
+dic = dict(zip(string.ascii_uppercase, range(1,27)))
+with open("C:\\Users\\JI YIHONG\\Dropbox\\mathematica\\Project Euler\\p022_names.txt") as f:
+    for line in f:
+        content = line.split(",")
+content = sorted(content)
+
+def calculate(num):
+    score  =  0
+    for char in num:
+        if char.isalpha():
+            score += dic[char]
+    return score
+total_score = 0
+
+for index, name in enumerate(content):
+    total_score += (index+1)*calculate(name)
+
+print(total_score)
