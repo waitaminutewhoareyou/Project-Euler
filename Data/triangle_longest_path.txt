@@ -1,0 +1,9 @@
+with open("C:\\Users\\JI YIHONG\\Dropbox\\mathematica\\Project Euler\\p018_triangle.txt") as f:
+    content = f.read().splitlines()
+content = [x.split() for x in content]
+
+
+for i in range(len(content)-2, -1, -1):
+    for j in range(len(content[i])):
+        content[i][j] = int(content[i][j]) + max(int(content[i+1][j]), int(content[i+1][j+1]))
+print(content)
