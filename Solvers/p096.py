@@ -14,11 +14,10 @@
 #
 # Input datasets for this example can be found in examples/data/sudoku*.
 
-
+import os
 from os.path import dirname, join
 project_root = dirname(dirname(__file__))
 data_path = join(project_root, 'Data', '')
-import os
 import math
 import gurobipy as gp
 from gurobipy import GRB
