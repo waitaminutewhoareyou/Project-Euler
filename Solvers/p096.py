@@ -34,6 +34,7 @@ class SudokuSolver:
     def loadTxt(self):
         file = open(self.dir, 'r')
         self.grid = np.array([ list(line.strip()) for line in file])
+        file.close()
         return self.grid
 
     def solve(self):
