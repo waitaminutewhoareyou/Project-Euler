@@ -1,0 +1,123 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3765,        113]
+NotebookOptionsPosition[      3192,         95]
+NotebookOutlinePosition[      3593,        111]
+CellTagsIndexPosition[      3550,        108]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "[", "d0_", "]"}], ":=", "\[IndentingNewLine]", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"d", "=", "d0"}], ",", "x", ",", "y"}], "}"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"Not", "[", 
+          RowBox[{"IntegerQ", "[", 
+           SqrtBox["d"], "]"}], "]"}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"x", ",", "y"}], "}"}], "=", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"x", ",", "y"}], "}"}], "/.", 
+            RowBox[{
+             RowBox[{"FindInstance", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{
+                   SuperscriptBox["x", "2"], "-", 
+                   RowBox[{"d", "*", 
+                    SuperscriptBox["y", "2"]}]}], "\[Equal]", "1"}], ",", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"x", ",", "y"}], "}"}], ">", "0"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"x", ",", "y"}], "}"}], ",", 
+               TemplateBox[{},
+                "Integers"]}], "]"}], "\[LeftDoubleBracket]", "1", 
+             "\[RightDoubleBracket]"}]}]}], ";", "x"}], ",", 
+         RowBox[{"x", "=", 
+          RowBox[{"-", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", "x"}]}], 
+     "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.81867079942048*^9, 3.8186708356936665`*^9}, {
+  3.8186708862185955`*^9, 3.8186709195877104`*^9}, {3.818670965911908*^9, 
+  3.8186710417865047`*^9}, {3.8186710923553123`*^9, 3.8186711233638983`*^9}},
+ CellLabel->
+  "In[119]:=",ExpressionUUID->"eeedbca2-c7bf-4c75-9230-4bc6de26e4bf"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MaximalBy", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{"i", ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "1000"}], "}"}]}], "]"}], ",", "f"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8186708407968044`*^9, 3.8186708422670155`*^9}, {
+  3.818670925592944*^9, 3.818670939140746*^9}, {3.818671130027522*^9, 
+  3.818671131163164*^9}},
+ CellLabel->
+  "In[121]:=",ExpressionUUID->"fc1b5e16-18e6-4da3-a25e-cd7ef02dacd0"],
+
+Cell[BoxData[
+ RowBox[{"{", "661", "}"}]], "Output",
+ CellChangeTimes->{
+  3.8186709396841993`*^9, {3.818671125979939*^9, 3.8186711430320306`*^9}},
+ CellLabel->
+  "Out[121]=",ExpressionUUID->"ee8be440-7521-4aa0-96bb-8abde6c79bbf"]
+}, Open  ]]
+},
+WindowSize->{1084, 988},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (December 7, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"d0246f8b-9e46-4cee-ae81-4f224b2e6372"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1897, 49, 139, "Input",ExpressionUUID->"eeedbca2-c7bf-4c75-9230-4bc6de26e4bf"],
+Cell[CellGroupData[{
+Cell[2480, 73, 463, 12, 28, "Input",ExpressionUUID->"fc1b5e16-18e6-4da3-a25e-cd7ef02dacd0"],
+Cell[2946, 87, 230, 5, 32, "Output",ExpressionUUID->"ee8be440-7521-4aa0-96bb-8abde6c79bbf"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
