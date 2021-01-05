@@ -38,7 +38,6 @@ def egcditer(a, b, withstats=False):
         bezout_t = 0
     return old_r, old_s, bezout_t
 
-
 forward_n = 1
 for_min = 1504170715041707
 backward_val = 1
