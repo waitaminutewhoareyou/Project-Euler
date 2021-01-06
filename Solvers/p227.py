@@ -7,7 +7,6 @@ n = 100
 
 class Roll:
     def __init__(self, position):
-        # self.pos = position % n
         self.pos = self.loc(position)
 
     def roll(self):
@@ -22,7 +21,6 @@ class Roll:
 
 
 def trial():
-
     count = 0
     rolls = [Roll(0), Roll(n // 2)]
     while True:
