@@ -10,13 +10,16 @@ a hyper ( a hyper n-1 (mod m)) (mod m)
 
 by induction
 '''
+
+
 def hyperMod(base, n, m):
     pbar.update(1)
     sleep(0.01)
-    if n==1:
+    if n == 1:
         return base % m
 
     return pow(base, hyperMod(base,n-1,m) ,m)
+
 
 base = 1777
 power = 1855
