@@ -1,0 +1,108 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3160,         98]
+NotebookOptionsPosition[      2679,         81]
+NotebookOutlinePosition[      3082,         97]
+CellTagsIndexPosition[      3039,         94]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "n_", "]"}], ":=", 
+   RowBox[{"Boole", "[", 
+    RowBox[{
+     RowBox[{"AllTrue", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["n", "2"], "+", "1"}], ",", 
+         RowBox[{
+          SuperscriptBox["n", "2"], "+", "3"}], ",", 
+         RowBox[{
+          SuperscriptBox["n", "2"], "+", "7"}], ",", 
+         RowBox[{
+          SuperscriptBox["n", "2"], "+", "9"}], ",", 
+         RowBox[{
+          SuperscriptBox["n", "2"], "+", "13"}], ",", 
+         RowBox[{
+          SuperscriptBox["n", "2"], "+", "27"}]}], "}"}], ",", "PrimeQ"}], 
+      "]"}], "\[And]", " ", 
+     RowBox[{"\[Not]", 
+      RowBox[{"AnyTrue", "[", 
+       RowBox[{
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["n", "2"], "+", "i"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "5", ",", "11", ",", "15", ",", "17", ",", "19", ",", "21", ",", 
+              "23", ",", "25"}], "}"}]}], "}"}]}], "]"}], ",", "PrimeQ"}], 
+       "]"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ParallelSum", "[", 
+  RowBox[{
+   RowBox[{"x", "*", 
+    RowBox[{"f", "[", "x", "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{
+      RowBox[{"150", "*", 
+       SuperscriptBox["10", "6"]}], "-", "1"}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8188016906206937`*^9, 3.818801835387377*^9}, {
+  3.818801899907277*^9, 3.818801983688779*^9}, {3.818802033243778*^9, 
+  3.8188020794175224`*^9}},
+ CellLabel->"In[52]:=",ExpressionUUID->"646fab27-158c-4ffe-96cc-c76f1aca9709"],
+
+Cell[BoxData["676333270"], "Output",
+ CellChangeTimes->{{3.818801353706894*^9, 3.818801380532113*^9}, {
+   3.818801773139214*^9, 3.8188018073652186`*^9}, 3.8188018375092335`*^9, 
+   3.818801928865771*^9, 3.818801986056204*^9, 3.818802041612908*^9, 
+   3.8188020832630525`*^9, 3.8188022288329086`*^9},
+ CellLabel->"Out[53]=",ExpressionUUID->"2e8fd2b6-17e2-471a-9c49-8ca661eb27c6"]
+}, Open  ]]
+},
+WindowSize->{760, 833},
+WindowMargins->{{Automatic, 593}, {-36, Automatic}},
+FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (December 7, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"74897458-858b-42c2-9bc2-d43607ec2fa1"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1701, 49, 78, "Input",ExpressionUUID->"646fab27-158c-4ffe-96cc-c76f1aca9709"],
+Cell[2284, 73, 379, 5, 32, "Output",ExpressionUUID->"2e8fd2b6-17e2-471a-9c49-8ca661eb27c6"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
