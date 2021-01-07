@@ -1,0 +1,80 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2188,         70]
+NotebookOptionsPosition[      1613,         51]
+NotebookOutlinePosition[      2111,         69]
+CellTagsIndexPosition[      2068,         66]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Sigma]", "[", "n_", "]"}], ":=", 
+   RowBox[{"Boole", "@", 
+    RowBox[{"IntegerQ", "@", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"Total", "@", 
+       SuperscriptBox[
+        RowBox[{"Divisors", "[", "n", "]"}], "2"]}], "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ParallelSum", "[", 
+  RowBox[{
+   RowBox[{"n", "*", 
+    RowBox[{"\[Sigma]", "[", "n", "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", 
+     RowBox[{"64000000", "-", "1"}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.81888671449642*^9, 3.818886866696928*^9}, {
+  3.818890027695753*^9, 3.8188900283116407`*^9}},
+ CellLabel->"In[61]:=",ExpressionUUID->"ef0c012a-126f-4170-a98a-4d1c4f388aeb"],
+
+Cell[BoxData["1922364685"], "Output",
+ CellChangeTimes->{{3.8188867187664447`*^9, 3.81888675802794*^9}, {
+   3.818886820381358*^9, 3.8188868391572275`*^9}, 3.818887478836588*^9, 
+   3.818890649186668*^9},
+ CellLabel->"Out[62]=",ExpressionUUID->"4c63492b-3d45-4929-8984-ac8319390327"]
+}, Open  ]]
+},
+WindowSize->{760, 813},
+WindowMargins->{{Automatic, -2286}, {24, Automatic}},
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
+FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (December 7, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"1e3a7c57-b1da-437f-bda2-f5ef401e70fe"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 731, 20, 52, "Input",ExpressionUUID->"ef0c012a-126f-4170-a98a-4d1c4f388aeb"],
+Cell[1314, 44, 283, 4, 53, "Output",ExpressionUUID->"4c63492b-3d45-4929-8984-ac8319390327"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
