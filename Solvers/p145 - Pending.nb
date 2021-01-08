@@ -1,0 +1,112 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3377,        102]
+NotebookOptionsPosition[      2586,         80]
+NotebookOutlinePosition[      2989,         96]
+CellTagsIndexPosition[      2946,         93]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"ReversibleQ", "[", "n_", "]"}], ":=", " ", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", "[", "n", "]"}], "\[Equal]", 
+       RowBox[{"Length", "[", 
+        RowBox[{"IntegerReverse", "[", "n", "]"}], "]"}]}], " ", "\[And]", 
+      RowBox[{"AllTrue", "[", 
+       RowBox[{
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{"n", "+", 
+          RowBox[{"IntegerReverse", "[", "n", "]"}]}], "]"}], ",", "OddQ"}], 
+       "]"}]}], ",", "1", ",", "0"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.818798163050979*^9, 3.8187982626714244`*^9}, {
+  3.8187983528166533`*^9, 3.8187983860637712`*^9}},
+ CellLabel->
+  "In[182]:=",ExpressionUUID->"d8794698-e560-410d-99c2-29788f9c55e2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ReversibleQ", "[", "36", "]"}]], "Input",
+ CellChangeTimes->{{3.8187982649613028`*^9, 3.818798302152101*^9}, {
+  3.8187983936165795`*^9, 3.8187983948961587`*^9}},
+ CellLabel->
+  "In[184]:=",ExpressionUUID->"fbe4ba97-dba5-4cd3-8563-9299b1d836de"],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{{3.8187982717631187`*^9, 3.8187983024363394`*^9}, {
+  3.818798387703388*^9, 3.8187983951235514`*^9}},
+ CellLabel->
+  "Out[184]=",ExpressionUUID->"96c6924b-b36f-4241-879c-0d6cfac4f312"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ParallelSum", "[", 
+  RowBox[{
+   RowBox[{"ReversibleQ", "[", "i", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", 
+     SuperscriptBox["10", "9"]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8187981989774127`*^9, 3.818798207906542*^9}, {
+  3.8187983448160424`*^9, 3.818798345631861*^9}, {3.8187983981763906`*^9, 
+  3.818798428592105*^9}},
+ CellLabel->
+  "In[187]:=",ExpressionUUID->"791a0b7e-7796-4c3b-9793-66b06e2db6b7"],
+
+Cell[BoxData["875"], "Output",
+ CellChangeTimes->{
+  3.8187983460078564`*^9, {3.8187984126935797`*^9, 3.8187984224415197`*^9}},
+ CellLabel->
+  "Out[186]=",ExpressionUUID->"6300d958-118a-46ed-9c84-b9f308c77f2d"]
+}, Open  ]]
+},
+WindowSize->{759, 813},
+WindowMargins->{{Automatic, 465}, {173, Automatic}},
+FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (December 7, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3193213b-7611-41e2-bfec-3cef7a728a41"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 777, 20, 67, "Input",ExpressionUUID->"d8794698-e560-410d-99c2-29788f9c55e2"],
+Cell[CellGroupData[{
+Cell[1360, 44, 269, 5, 28, "Input",ExpressionUUID->"fbe4ba97-dba5-4cd3-8563-9299b1d836de"],
+Cell[1632, 51, 232, 4, 32, "Output",ExpressionUUID->"96c6924b-b36f-4241-879c-0d6cfac4f312"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1901, 60, 456, 11, 32, "Input",ExpressionUUID->"791a0b7e-7796-4c3b-9793-66b06e2db6b7"],
+Cell[2360, 73, 210, 4, 32, "Output",ExpressionUUID->"6300d958-118a-46ed-9c84-b9f308c77f2d"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
