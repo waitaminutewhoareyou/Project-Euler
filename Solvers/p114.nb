@@ -1,0 +1,109 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3851,         99]
+NotebookOptionsPosition[      3273,         81]
+NotebookOutlinePosition[      3678,         97]
+CellTagsIndexPosition[      3635,         94]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"RecurrenceTable", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"f", "[", "k", "]"}], "\[Equal]", 
+      RowBox[{
+       RowBox[{"2", "*", 
+        RowBox[{"f", "[", 
+         RowBox[{"k", "-", "1"}], "]"}]}], "-", 
+       RowBox[{"f", "[", 
+        RowBox[{"k", "-", "2"}], "]"}], "+", 
+       RowBox[{"f", "[", 
+        RowBox[{"k", "-", "4"}], "]"}]}]}], ",", 
+     RowBox[{
+      RowBox[{"f", "[", "1", "]"}], "\[Equal]", "1"}], ",", 
+     RowBox[{
+      RowBox[{"f", "[", "2", "]"}], "\[Equal]", "1"}], ",", 
+     RowBox[{
+      RowBox[{"f", "[", "3", "]"}], "\[Equal]", "2"}], ",", 
+     RowBox[{
+      RowBox[{"f", "[", "4", "]"}], "\[Equal]", "4"}]}], "}"}], ",", "f", ",", 
+   RowBox[{"{", 
+    RowBox[{"k", ",", "1", ",", "50"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8190811829368286`*^9, 3.8190812906815042`*^9}, {
+  3.8190825044833813`*^9, 3.8190826155299187`*^9}, {3.8190828522143173`*^9, 
+  3.819082860322546*^9}, {3.8190829128191247`*^9, 3.819082916178789*^9}, {
+  3.8190832323875923`*^9, 3.8190832430107565`*^9}, {3.819083665051482*^9, 
+  3.8190836842755766`*^9}, {3.819084512915596*^9, 3.8190845477156863`*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"94a7b0c9-4036-451a-9d94-a98bf16c1a01"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "1", ",", "2", ",", "4", ",", "7", ",", "11", ",", "17", ",", 
+   "27", ",", "44", ",", "72", ",", "117", ",", "189", ",", "305", ",", "493",
+    ",", "798", ",", "1292", ",", "2091", ",", "3383", ",", "5473", ",", 
+   "8855", ",", "14328", ",", "23184", ",", "37513", ",", "60697", ",", 
+   "98209", ",", "158905", ",", "257114", ",", "416020", ",", "673135", ",", 
+   "1089155", ",", "1762289", ",", "2851443", ",", "4613732", ",", "7465176", 
+   ",", "12078909", ",", "19544085", ",", "31622993", ",", "51167077", ",", 
+   "82790070", ",", "133957148", ",", "216747219", ",", "350704367", ",", 
+   "567451585", ",", "918155951", ",", "1485607536", ",", "2403763488", ",", 
+   "3889371025", ",", "6293134513", ",", "10182505537", ",", "16475640049"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.8190812456779256`*^9, 3.819081290997656*^9}, {
+   3.819082573320837*^9, 3.8190826159737325`*^9}, 3.819082855909733*^9, 
+   3.8190829163966217`*^9, {3.819083237460174*^9, 3.819083243461618*^9}, {
+   3.819083674631287*^9, 3.8190836846775017`*^9}, {3.819084513408985*^9, 
+   3.819084547990862*^9}},
+ CellLabel->"Out[19]=",ExpressionUUID->"95d52342-630d-45d2-a2fd-3a02817627fe"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.8190811988885517`*^9, 3.819081201556781*^9}, 
+   3.819084649999402*^9},ExpressionUUID->"c4e89237-4c0e-461f-965d-\
+3e6f62e75a94"]
+},
+WindowSize->{760, 833},
+WindowMargins->{{Automatic, -2537}, {-67, Automatic}},
+FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (December 7, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"22dcf7e7-36d5-4187-99a9-bca8b3dd7b68"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1271, 30, 48, "Input",ExpressionUUID->"94a7b0c9-4036-451a-9d94-a98bf16c1a01"],
+Cell[1854, 54, 1223, 19, 109, "Output",ExpressionUUID->"95d52342-630d-45d2-a2fd-3a02817627fe"]
+}, Open  ]],
+Cell[3092, 76, 177, 3, 28, "Input",ExpressionUUID->"c4e89237-4c0e-461f-965d-3e6f62e75a94"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
