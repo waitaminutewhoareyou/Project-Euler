@@ -1,5 +1,5 @@
 import numpy as np
-from tqdm import tqdm
+from tqdm import trange
 import os
 from os.path import dirname, join
 
@@ -19,10 +19,8 @@ class PrimeFrog:
             curLocation = Path[-1]
             if curLocation == 1:
                 yield from self.findAllPath(Path + [2], lengthRemain - 1)
-                yield from self.findAllPath(Path + [2], lengthRemain - 1)  # repeat to obey probability law
             elif curLocation == 500:
                 yield from self.findAllPath(Path + [499], lengthRemain - 1)
-                yield from self.findAllPath(Path + [499], lengthRemain - 1)  # repeat to obey probability law
             else:
                 yield from self.findAllPath(Path + [curLocation - 1], lengthRemain - 1)
                 yield from self.findAllPath(Path + [curLocation + 1], lengthRemain - 1)
@@ -53,37 +51,22 @@ class PrimeFrog:
         assert len(num2str) == len(self.target), 'Illegal matach'
         prob = [2 / 3 if num2str[ix] == self.target[ix] else 1 / 3 for ix in range(len(num2str))]
         probability = np.prod(prob)
-        booleanMatch = [num2str[ix] == self.target[ix] for ix in range(len(num2str))]
-        numerator = 2 ** booleanMatch.count(True)
-        denominator = 3 ** len(self.target)
-        assert abs(probability - numerator / denominator) < 1e-4
-
-        return probability, numerator, denominator
+        return probability
 
     def main(self):
-
-        running_prob, total_den, total_num = 0, 0, 0
-        # with open(data_path + 'p329.txt', 'w') as f:
-        for loc in tqdm(range(1, 501)):
-
+        running_prob = 0
+        for loc in trange(1, 501):
             for path in self.findAllPath([loc], self.n - 1):
-                probability, numerator, denominator = self.computeProbability(path)
-                running_prob += probability
-                total_den = denominator
-                total_num += numerator
-
-
-                    # num2str = ''.join(map(lambda x: 'P' if self.PrimeQ(x) else 'N', path))
-                    # f.write("%s\n" % num2str)
-        running_prob /= (500* 2 ** (self.n-1))
-        total_den = total_den * (500* 2 ** (self.n-1))
-        assert abs(running_prob - total_num / total_den) < 1e-4, f'{running_prob} = {total_num}/ {total_den}'
-        return running_prob, total_num, total_den
+                running_prob += self.computeProbability(path)
+        running_prob /= (500 * 2 ** (self.n - 1))
+        return running_prob
 
 
 if __name__ == '__main__':
     frog = PrimeFrog()
 
-    print(frog.main())
-
-    # (6.796996401016548e-06, 798961412, 117546246144000)
+    prob = frog.main()
+    denominator = 500 * (2 ** 14) * (3 ** 15)
+    nuemerator = round(denominator * prob)
+    print(prob, nuemerator, denominator)
+    # 0.10734367823989777
