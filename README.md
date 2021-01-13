@@ -1,2 +1,2 @@
 # Project-Euler
-A collection of solutions (mostly in Mathematica) to Project Euler
+A collection of solutions (mostly in Mathematica & Python) to Project Euler
